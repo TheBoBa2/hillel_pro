@@ -1,0 +1,14 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Список фільмів{% endblock %}
+
+{% block content %}
+    <h2>Каталог фільмів</h2>
+
+    {% for movie in movies %}
+        <div class="movie-card">
+            <b>{{ movie.title }}</b> ({{ movie.year }}) — <i>{{ movie.genre }}</i>
+            <span>| Рейтинг: {{ movie.rating }}</span>
+        </div>
+    {% endfor %}
+{% endblock %}

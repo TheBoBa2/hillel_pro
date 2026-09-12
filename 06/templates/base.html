@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фільми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 700px;
+            margin: 30px auto;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .movie-card {
+            background: #eef2f5;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #2c3e50;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 6px 12px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Каталог фільмів</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Головна</a>
+            <a href="{{ url_for('movies') }}">Фільми</a>
+            <a href="{{ url_for('stats') }}">Статистика</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

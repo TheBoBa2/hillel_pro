@@ -1,0 +1,16 @@
+﻿{% extends "base.html" %}
+
+{% block title %}
+    {% if show_about %}Про сайт{% else %}Головна{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if show_stats %}
+        <h2>Статистика каталогу</h2>
+        <p>Усього фільмів у системі: <b>{{ total }}</b></p>
+        <p>Найвищий рейтинг має фільм: <b>{{ top.title }}</b> ({{ top.rating }})</p>
+    {% else %}
+        <h2>Сайт по фільмам</h2>
+        <p>Це простий каталог для перегляду фільмів</p>
+    {% endif %}
+{% endblock %}
